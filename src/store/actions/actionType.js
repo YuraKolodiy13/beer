@@ -1,0 +1,4 @@
+export const GET_BEERS_START = 'GET_BEERS_START';
+export const GET_BEERS_SUCCESS = 'GET_BEERS_SUCCESS';
+export const GET_BEER_START = 'GET_BEER_START';
+export const GET_BEER_SUCCESS = 'GET_BEER_SUCCESS';
