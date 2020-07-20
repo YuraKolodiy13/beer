@@ -20,7 +20,6 @@ app.get('/*', function (req, res) {
 });
 app.listen(port);
 
-
 // verbose replacement
 function logProvider(provider) {
   const logger = new (require('winston').Logger)();
