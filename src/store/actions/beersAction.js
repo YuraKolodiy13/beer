@@ -1,6 +1,6 @@
 import {GET_BEER_START, GET_BEER_SUCCESS, GET_BEERS_START, GET_BEERS_SUCCESS} from "./actionType";
 import axios from "axios";
-const apiUrl = 'http://api.brewerydb.com/v2/';
+const apiUrl = '/';
 const apiKey = 'b6410392f9a3d5c203e3ad32bcae0a71';
 const proxyCorsService = 'https://thingproxy.freeboard.io/fetch';
 let beersCurrentPage = 1;
@@ -9,7 +9,7 @@ export const getBeers = () => async dispatch => {
   dispatch({
     type: GET_BEERS_START
   });
-  const response = await axios.get(`${proxyCorsService}/${apiUrl}beers/?key=${apiKey}&p=${beersCurrentPage}`);
+  const response = await axios.get(`${apiUrl}v2/beers/?key=${apiKey}&p=${beersCurrentPage}`);
   beersCurrentPage += 1;
   dispatch({
     type: GET_BEERS_SUCCESS,
