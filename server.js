@@ -8,9 +8,17 @@ const port = process.env.PORT || 8080;
 const app = express();
 const REDIRECTION_URL = 'http://api.brewerydb.com';
 
+console.log(port)
+
 app.use(cors());
 
-app.use('/', createProxyMiddleware({ target: REDIRECTION_URL, changeOrigin: true }));
+app.use('/proxy', createProxyMiddleware({
+  target: REDIRECTION_URL,
+  pathRewrite: {
+    '^/proxy': ''
+  },
+  changeOrigin: true
+}));
 
 if(process.env.NODE_ENV !== 'dev'){
   app.use(favicon(__dirname + '/build/favicon.ico'));
