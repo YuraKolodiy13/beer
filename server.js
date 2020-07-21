@@ -2,8 +2,6 @@ const express = require('express');
 const favicon = require('express-favicon');
 const path = require('path');
 const port = process.env.PORT || 8080;
-console.log(process.env.PORT)
-console.log(port)
 const app = express();
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const REDIRECTION_URL = 'http://api.brewerydb.com';
