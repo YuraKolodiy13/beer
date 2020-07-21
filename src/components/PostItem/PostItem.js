@@ -1,13 +1,13 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import './PostItem.scss'
-import broken_img from "../../assets/images/broken-img.png";
+import no_img from "../../assets/images/no-img.png";
 
 const PostItem = props => {
   return (
     <div className='post__wrap'>
       <div className='posts__item fade-in'>
-        <div className="posts__img" style={{backgroundImage: `url(${props.item.labels ? props.item.labels.medium : broken_img })`}}>
+        <div className="posts__img" style={{backgroundImage: `url(${props.item.labels ? props.item.labels.medium : no_img })`}}>
           {/*<Link to={`/post/${props.item[0]}`}/>*/}
         </div>
         <div className="posts__wrap">

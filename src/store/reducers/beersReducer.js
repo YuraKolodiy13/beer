@@ -11,7 +11,7 @@ const postReducer = (state = initialState, action) => {
     case GET_BEERS_START:
       return {
         ...state,
-        loading: true
+        loading: action.page === 1
       };
     case GET_BEERS_SUCCESS:
       return {
