@@ -8,7 +8,7 @@ const Header = props =>{
     <nav className='header__wrapper'>
       <div className='header container'>
         <h1>
-          <NavLink to='/' exact>React Blog changed again</NavLink>
+          <NavLink to='/' exact>React Beers</NavLink>
         </h1>
         {props.user
           ? <ul>
